@@ -28,7 +28,6 @@ const NAV = [
 
 export default function App() {
   const params = useMemo(() => new URLSearchParams(location.search), [])
-  const guest = params.get('to')?.trim().slice(0, 60) || ''
   // ?open skips the door screen (direct link / previews); music then waits for the toggle.
   const skipGate = params.has('open')
   const [gateOpen, setGateOpen] = useState(!skipGate)
@@ -93,7 +92,6 @@ export default function App() {
       <AnimatePresence>
         {gateOpen && (
           <Gate
-            guest={guest}
             onOpen={() => {
               startMusic()
               setStarted(true)

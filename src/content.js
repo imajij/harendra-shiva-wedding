@@ -12,8 +12,6 @@ export const cover = {
   title: 'मंगल परिणय',
   ceremony: ['टीका पाणिग्रहण संस्कार', 'एवं प्रीतिभोज'],
   dateLine: 'बुधवार दिनांक 25 नवम्बर 2026',
-  addressedTo: 'प्रतिष्ठा में,',
-  honorific: 'श्रीमान्',
 }
 
 export const invocation = {

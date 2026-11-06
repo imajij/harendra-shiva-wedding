@@ -46,16 +46,9 @@ Any other static host works too (it serves from the root, so no `BASE_PATH`):
 `og:image` in `index.html` is an absolute GitHub Pages URL so WhatsApp shows the
 preview card; change it if you move to another domain.
 
-## Personalised links
+## Links
 
-Add `?to=` with the guest's name, and it appears on the opening screen in the
-card's "प्रतिष्ठा में, श्रीमान् …" line:
-
-```
-https://<your-domain>/?to=रमेश%20शर्मा%20एवं%20परिवार
-```
-
-Without `?to=` the line shows a blank rule, like the printed card.
+The invitation is generic: every guest gets the same link.
 Add `?open` to skip the door screen and land straight on the invitation (music then starts from the toggle).
 
 ## Editing content

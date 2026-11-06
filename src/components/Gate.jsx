@@ -10,7 +10,7 @@ const ease = [0.7, 0, 0.2, 1]
  * Tap-to-enter screen: carved palace doors with the HS seal.
  * Tapping starts the music (user gesture) and swings the doors open.
  */
-export default function Gate({ guest, onOpen, onDone }) {
+export default function Gate({ onOpen, onDone }) {
   const [opening, setOpening] = useState(false)
 
   const open = () => {
@@ -83,24 +83,6 @@ export default function Gate({ guest, onOpen, onDone }) {
         >
           {cover.title}
         </motion.p>
-
-        <motion.div
-          className="gate__to"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.4, duration: 1 }}
-        >
-          <span>{cover.addressedTo}</span>
-          <span className="gate__to-name">
-            {guest ? (
-              <>
-                {cover.honorific} {guest}
-              </>
-            ) : (
-              <i aria-hidden="true" />
-            )}
-          </span>
-        </motion.div>
 
         <motion.button
           type="button"

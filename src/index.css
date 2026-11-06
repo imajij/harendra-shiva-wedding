@@ -232,26 +232,8 @@ a {
   letter-spacing: 0.12em;
   color: #f3dfb1;
 }
-.gate__to {
-  margin: 22px 0 28px;
-  display: flex;
-  align-items: baseline;
-  gap: 10px;
-  font-size: 15px;
-  color: #ecd9b0;
-}
-.gate__to-name {
-  font-family: var(--f-display);
-  font-size: 19px;
-  color: #fff3d6;
-}
-.gate__to-name i {
-  display: inline-block;
-  width: 140px;
-  border-bottom: 1px dashed rgba(233, 205, 136, 0.6);
-  transform: translateY(-4px);
-}
 .gate__btn {
+  margin-top: 32px;
   --pad: 15px 34px 12px;
   font-size: 21px;
 }
@@ -1294,8 +1276,8 @@ h1, h2, h3, p, dd, blockquote {
   .gate__names {
     margin-top: calc(12px - 0.32em);
   }
-  .gate__to {
-    margin: 12px 0 18px;
+  .gate__btn {
+    margin-top: 20px;
   }
 }
 @media (max-height: 560px) {
