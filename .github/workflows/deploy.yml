@@ -1,8 +1,9 @@
 name: Deploy to GitHub Pages
 
+# Manual only: Actions is currently blocked on this account by billing, so
+# deploys go through `npm run deploy` (gh-pages branch). Once Actions works,
+# add `push: branches: [main]` back and set Pages source to "GitHub Actions".
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:

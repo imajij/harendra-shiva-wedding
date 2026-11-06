@@ -24,15 +24,19 @@ npm run preview    # serve dist/ at http://localhost:4173
 
 **Live:** https://imajij.github.io/harendra-shiva-wedding/
 
-GitHub Pages deploys automatically: every push to `main` runs
-`.github/workflows/deploy.yml`, which builds with `BASE_PATH=/harendra-shiva-wedding/`
-and publishes `dist/`. You can also re-run it from the repo's **Actions** tab.
-
-To build the Pages version locally:
+To publish a new version to GitHub Pages:
 
 ```bash
-BASE_PATH=/harendra-shiva-wedding/ npm run build
+git push            # save the source to main
+npm run deploy      # build with BASE_PATH=/harendra-shiva-wedding/ and push dist/ to gh-pages
 ```
+
+Pages serves the `gh-pages` branch (Settings → Pages → Deploy from a branch → `gh-pages` / root);
+the update is live about a minute after the deploy command.
+
+`.github/workflows/deploy.yml` is an Actions-based alternative. It is manual-only for now
+because GitHub Actions is blocked on this account by a billing lock; once that's cleared,
+re-enable its `push` trigger and switch the Pages source to "GitHub Actions".
 
 Any other static host works too (it serves from the root, so no `BASE_PATH`):
 
